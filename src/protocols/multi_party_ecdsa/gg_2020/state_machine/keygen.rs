@@ -415,7 +415,7 @@ enum R {
 ///
 /// Hides actual messages structure so it could be changed without breaking semver policy.
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct ProtocolMessage(M);
+pub struct ProtocolMessage(pub M);
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub enum M {
