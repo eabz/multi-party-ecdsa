@@ -417,6 +417,12 @@ enum R {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ProtocolMessage(pub M);
 
+impl ProtocolMessage {
+    pub fn new(m: M) -> ProtocolMessage {
+        ProtocolMessage(m)
+    }
+}
+
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub enum M {
     Round1(gg_2020::party_i::KeyGenBroadcastMessage1),
